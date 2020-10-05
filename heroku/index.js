@@ -38,8 +38,8 @@ app.get(['/facebook', '/instagram'], function(req, res) {
 });
 
 app.post('/facebook', function (req, res) {
-    console.log('Facebook request:', req);
-  console.log('Facebook request body:', req.body);
+    console.log('Facebook request:', JSON.stringify(req));
+  //console.log('Facebook request body:', req.body);
   
   if (!req.isXHubValid()) {
     console.log('Warning - request header X-Hub-Signature not present or invalid');
